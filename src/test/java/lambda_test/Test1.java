@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -68,6 +69,8 @@ public class Test1 {
         List<WebElement> allMessages=driver.findElements(By.xpath("//p"));
         for (int i = 0; i < allMessages.size(); i++) {
             if (allMessages.get(i).getText().contains("Thanks")){
+                System.out.println(allMessages.get(i).getText());
+                Assert.assertTrue(allMessages.get(i).isDisplayed());
 
             }
         }
