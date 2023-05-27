@@ -68,12 +68,13 @@ public class Test1 {
 
         List<WebElement> allMessages=driver.findElements(By.xpath("//p"));
         for (int i = 0; i < allMessages.size(); i++) {
-            if (allMessages.get(i).getText().contains("Thanks")){
+            if (allMessages.get(i).getText().contains("Thanks")) {
                 System.out.println(allMessages.get(i).getText());
                 Assert.assertTrue(allMessages.get(i).isDisplayed());
 
             }
         }
+            System.out.println("this one for github");
 
 
 
